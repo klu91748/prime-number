@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">primenumber</a> &gt; <a href="index.source.html" class="el_package">com.example.primenumber</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package com.example.primenumber;
+
+import java.util.List;
+
+import com.example.service.PrimeNumberGeneratorService;
+
+<span class="nc" id="L7">public class Main {</span>
+
+	public static void main(String[] args) {
+<span class="nc" id="L10">		PrimeNumberGeneratorService service = new PrimeNumberGeneratorService();</span>
+		
+<span class="nc" id="L12">		int value1 = Integer.parseInt(args[0]);</span>
+<span class="nc" id="L13">		int value2 = Integer.parseInt(args[1]);</span>
+
+<span class="nc" id="L15">		List&lt;Integer&gt; result = service.generate(value1, value2);</span>
+		
+<span class="nc bnc" id="L17" title="All 2 branches missed.">		for (int i = 0; i &lt; result.size(); i++) {</span>
+<span class="nc" id="L18">			System.out.println(result.get(i));</span>
+		}
+		
+<span class="nc" id="L21">		System.out.println(service.isPrime(100));</span>
+<span class="nc" id="L22">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
